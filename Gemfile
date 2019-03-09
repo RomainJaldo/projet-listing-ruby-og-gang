@@ -3,6 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.0'
 
+#Bootstrap
+gem 'bootstrap', '>= 4.0.0'
+# jquery-rails
+gem 'jquery-rails'
 #Bundle rails_admin
 gem 'rails_admin', '~> 1.4', '>= 1.4.2'
 # Bundle devise
