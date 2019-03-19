@@ -10,6 +10,19 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-dark bg-dark" id="navbar">
+      <a class="nav-brand" id="navTitle">Listings</a>
+      <form class="form-inline">
+        <button class="btn btn-light my-2 my-sm-0" type="button">Login</button>
+        <select class="form-control" id="btnLang">
+          <option selected>EN</option>
+          <option>FR</option>
+        </select>
+        <button class="btn btn-success my-2 my-sm-0" type="button">Create my listing</button>
+      </form>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
