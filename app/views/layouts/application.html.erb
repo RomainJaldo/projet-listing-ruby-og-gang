@@ -10,15 +10,15 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-dark bg-dark" id="navbar">
-      <a class="nav-brand" id="navTitle" href="#">Listings</a>
+    <nav class="navbar navbar-dark bg-dark font-weight-bold text-white" id="navbar">
+      <a class="nav-brand" id="navTitle" href="/">Listings</a>
       <form class="form-inline">
-        <button class="btn btn-light my-2 my-sm-0" type="button">Login</button>
+        <a class="nav-link text-white my-2 my-sm-0" href="/users/sign_in">>> Login</a>
         <select class="form-control" id="btnLang">
-          <option selected>EN</option>
-          <option>FR</option>
+          <option selected value="en">EN</option>
+          <option value="fr">FR</option>
         </select>
-        <button class="btn btn-success my-2 my-sm-0" type="button">Create my listing</button>
+        <%= link_to "Create my listings", listing_index_path, class: "btn btn-success my-2 my-sm-0 bg-success" %>
       </form>
     </nav>
     <div class="container">
