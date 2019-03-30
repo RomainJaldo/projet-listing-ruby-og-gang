@@ -1,1 +1,31 @@
-<h1>Liste des produits</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col productBloc">
+      <h2 class="productTitle">Ordinateur</h2>
+      <div class="divDateTag">
+        <p class="productDate">2019-03-29 11:15</p>
+        <div class="productTagDiv">
+          <p>Electronique</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2 productImgDiv">
+          <!--<img src="/app/assets/images/laptop.png" class="productImg"/>-->
+          <%= image_tag("laptop.png", class: "productImg") %>
+        </div>
+        <div class="col-sm-9">
+          <p class="productDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <div class="productDivPrixBtn">
+            <p class="productPrix">500.00€</p>
+            <button class="btn btn-success productBtn">Contact seller</button>
+          </div>
+        </div>
+        <div class="col-sm-1">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
