@@ -23,7 +23,7 @@ html, body {
 /* --- Navbar ---*/
 
 #navbar{
-    opacity: 0.7;
+    //opacity: 0.7;
 }
 
 #navTitle{
@@ -109,3 +109,24 @@ html, body {
   margin-top: 35px;
   font-weight: bold;
 }
+
+
+/*--- Modal ---*/
+
+.modal-dialog {
+  min-width: 800px;
+}
+
+.modal-content{
+  background-color : #343a40;
+}
+
+.modal-txt{
+  color: white;
+}
+
+#modal-close{
+  color: white;
+}
+
+/*--- END Modal ---*/

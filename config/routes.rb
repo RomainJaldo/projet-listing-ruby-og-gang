@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   #get 'home', to: 'home#index'
 
   root to: 'listings#index'
-  resources :listings, only: [:index]  
+  resources :listings, only: [:index]
 
 end

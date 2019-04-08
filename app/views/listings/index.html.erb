@@ -20,11 +20,35 @@
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <div class="productDivPrixBtn">
             <p class="productPrix">500.00€</p>
-            <button class="btn btn-success productBtn">Contact seller</button>
+            <button class="btn btn-success productBtn" data-toggle="modal" data-target="#contactModal">Contact seller</button>
           </div>
         </div>
         <div class="col-sm-1">
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal contact -->
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title modal-txt">Contact seller</h5>
+        <button type="button" class="close" id="modal-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="textAreaContact" class="modal-txt">Your message</label>
+          <textarea class="form-control" id="textAreaContact" rows="10"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Send</button>
       </div>
     </div>
   </div>
