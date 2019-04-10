@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   root to: 'listings#index'
   resources :listings, only: [:index]
 
+  root to: 'create#index'
+  resources :create, only: [:index]
+
 end
