@@ -43,6 +43,12 @@ fr:
     search_fied: "Que recherchez-vous ?"
   listings:
     contact_seller: "Contacter le vendeur"
+    title: "Titre"
+    description: "Description"
+    category: "Catégorie"
+    price: "Prix"
+    picture: "Choisissez une image"
+    save: "Enregistrer"
   date:
     day_names:
       - "Lundi"

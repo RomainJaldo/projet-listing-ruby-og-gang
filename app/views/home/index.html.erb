@@ -5,9 +5,9 @@
       </div>
       <div class="col-8" id="searchBloc">
         <h1 class="font-weight-bold text-light"id="homepageTitle"><%= t("title") %><h1>
-        <%= form_tag("listings_en_path", method: "get", id: "searchForm") do %>
-          <%= text_field_tag :search, nil, placeholder: t("homepage.search_fied"), class: "form-control"%>
-          <%= submit_tag t("homepage.search"), name: nil, class: "btn btn-success my-2 my-sm-0 bg-success" %>
+        <%= form_tag(listings_en_path, method: "get", id: "searchForm") do %>
+          <%= text_field_tag :query, params[':query'], placeholder: t("homepage.search_fied"), class: "form-control search"%>
+          <%= submit_tag t("homepage.search"), class: "btn btn-success my-2 my-sm-0 bg-success" %>
         <% end %>
         </div>
       </div>

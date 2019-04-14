@@ -42,6 +42,12 @@ en:
     search_fied: "What are you searching for ?"
   listings:
     contact_seller: "Contact seller"
+    title: "Title"
+    description: "Description"
+    category: "Category"
+    price: "Price"
+    picture: "Chosse a picture"
+    save: "Save"
   activerecord:
     errors:
       models:

@@ -4,29 +4,35 @@
       <div class="col">
       </div>
       <div class="col-9" id="createCol">
-        <h3>Create my listing</h3>
-        <div class="form-group" id="createForm">
-          <label class="createText">Title*</label>
-          <input class="form-control">
-          <label class="createText">Category*</label>
-          <select class="form-control">
-            <option selected>Electronique</option>
+        <h3><%= t("homepage.create") %></h3>
+        <%= form_for @posts, url: {action: "create"}, html: {class: "form-group"}  do |post| %>
+          <label class="createText"><%= t("listings.title") %>*</label>
+          <%= post.text_field :title %>
+          <label class="createText"><%= t("listings.category") %>*</label>
+          <select name="post[category_id]" class="form-control">
+          <%= select_tag(:category_id, %>
+            <% Category.all.each do |category| %>
+              <option value="<%= category.id %>"><%= category.name %></option>
+            <% end %>
+          <% ) %>
+
           </select>
-          <label class="createText">Description*</label>
-          <textarea class="form-control" rows="10"></textarea>
-          <label class="createText">Choose a picture*</label>
+          <label class="createText"><%= t("listings.description") %>*</label>
+          <%= post.text_area :description %>
+          <label class="createText">Choose a picture</label>
           <input type="file" class="form-control">
-          <label class="createText">Price*</label>
-          <input class="form-control">
+          <label class="createText"><%= t("listings.price") %>*</label>
+          <%= post.text_field :price %>
           <div class="row">
             <div class="col-3">
               <p class="createText">*Required field</p>
             </div>
             <div class="col-8"></div>
             <div class="col-1" id="createColButton">
-              <button type="button" class="btn btn-success">Save</button>
+              <%= post.submit t("listings.save"), {class: "btn btn-success", id: "submit"} %>
             </div>
           </div>
+        <% end %>
         </div>
       </div>
       <div class="col">
