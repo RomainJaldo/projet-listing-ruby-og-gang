@@ -41,6 +41,8 @@ fr:
     create: "Créer une annonce"
     search: "Rechercher"
     search_fied: "Que recherchez-vous ?"
+  listings:
+    contact_seller: "Contacter le vendeur"
   date:
     day_names:
       - "Lundi"
