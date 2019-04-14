@@ -13,6 +13,8 @@ gem 'rails_admin', '~> 1.4', '>= 1.4.2'
 gem 'devise', '~> 4.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
+#Route_translator
+gem 'route_translator', '~> 5.9'
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.3.6"
 # Use Puma as the app server

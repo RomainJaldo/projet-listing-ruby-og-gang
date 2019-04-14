@@ -39,6 +39,7 @@ fr:
   hello: "Hello world"
   homepage:
     search: "Rechercher"
+    create: "Créer une annonce"
   date:
     day_names:
       - "Lundi"

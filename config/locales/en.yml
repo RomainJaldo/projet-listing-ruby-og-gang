@@ -38,6 +38,7 @@ en:
   hello: "Hello world"
   homepage:
     search: "Search"
+    create: "Create my listing"
   activerecord:
     errors:
       models:
