@@ -1,11 +1,17 @@
 class ListingsController < ApplicationController
 
-    def index
+  #before_action :authentificate_user!, except =>[:index]
 
-    end
+  def index
+    @listing = Post.all.order('created_at DESC')
+  end
 
-    def show
+  def new
+    @listing = Post.new
+  end
 
-    end
+  def create
+
+  end
 
 end

@@ -18,7 +18,7 @@
           <option value="en" <%= "selected" if session[:locale] == 'en' %>>EN</option>
               <option value="fr" <%= "selected" if session[:locale] == 'fr' %>>FR</option>
         </select>
-        <%= link_to t("homepage.create"), listing_index_path, class: "btn btn-success my-2 my-sm-0 bg-success" %>
+        <%= link_to t("homepage.create"), new_listing_path, class: "btn btn-success my-2 my-sm-0 bg-success" %>
       </form>
     </nav>
       <%= yield %>

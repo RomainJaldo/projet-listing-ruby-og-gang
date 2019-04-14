@@ -40,6 +40,8 @@ en:
     create: "Create my listing"
     search: "Search"
     search_fied: "What are you searching for ?"
+  listings:
+    contact_seller: "Contact seller"
   activerecord:
     errors:
       models:
