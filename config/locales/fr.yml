@@ -31,14 +31,16 @@
 
 fr:
   search: "Rechercher"
-  title: "Titre"
+  title: "Vous allez trouver"
   content: "Contenu"
   tags: "Tags"
   image: "Image"
   category: "Catégorie"
   hello: "Hello world"
   homepage:
+    create: "Créer une annonce"
     search: "Rechercher"
+    search_fied: "Que recherchez-vous ?"
   date:
     day_names:
       - "Lundi"

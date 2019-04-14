@@ -15,10 +15,10 @@
       <form class="form-inline">
         <a class="nav-link text-white my-2 my-sm-0" href="/users/sign_in">>> Login</a>
         <select class="form-control" id="btnLang">
-          <option selected value="en">EN</option>
-          <option value="fr">FR</option>
+          <option value="en" <%= "selected" if session[:locale] == 'en' %>>EN</option>
+              <option value="fr" <%= "selected" if session[:locale] == 'fr' %>>FR</option>
         </select>
-        <%= link_to "Create my listings", listings_path, class: "btn btn-success my-2 my-sm-0 bg-success" %>
+        <%= link_to t("homepage.create"), listing_index_path, class: "btn btn-success my-2 my-sm-0 bg-success" %>
       </form>
     </nav>
       <%= yield %>
