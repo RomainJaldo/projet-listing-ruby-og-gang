@@ -66,7 +66,7 @@ html, body {
 }
 
 .productBloc{
-  height: 305px;
+  height: auto;
   background-color: white;
   border-bottom: 1px solid gray;
 }
@@ -106,6 +106,50 @@ html, body {
 .productDivPrixBtn{
   display: flex;
   justify-content: space-between;
-  margin-top: 35px;
+  margin-bottom: 1em;
   font-weight: bold;
 }
+
+
+/*--- Modal ---*/
+
+.modal-dialog {
+  min-width: 800px;
+}
+
+.modal-content{
+  background-color : #343a40;
+}
+
+.modal-txt{
+  color: white;
+}
+
+#modal-close{
+  color: white;
+}
+
+/*--- END Modal ---*/
+
+/*--- Create ---*/
+
+#createCol{
+  margin-top: 10px;
+}
+
+#createForm{
+  background-color: #343a40;
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.createText{
+  margin-top: 7px;
+}
+
+#createColButton{
+  margin-top: 15px;
+  right: 23px;
+}
+/*--- End Create ---*/

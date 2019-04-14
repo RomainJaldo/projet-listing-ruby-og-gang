@@ -30,14 +30,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  title: "Title"
+  title: "You're going to find"
   content: "Content"
   tags: "Tags"
   image: "Image"
   category: "Category"
   hello: "Hello world"
   homepage:
+    create: "Create my listing"
     search: "Search"
+    search_fied: "What are you searching for ?"
+  listings:
+    contact_seller: "Contact seller"
   activerecord:
     errors:
       models:
