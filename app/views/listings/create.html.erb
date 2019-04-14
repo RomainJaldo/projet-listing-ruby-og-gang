@@ -1,0 +1,39 @@
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col-9" id="createCol">
+        <h3><%= t("homepage.create") %></h3>
+        <%= form_tag listings_en_path, method: :post, multipart: true, class: "form-group", id: "createForm" do %>
+          <label class="createText"><%= t("listings.title") %>*</label>
+          <%= text_field_tag 'post[title]', @post.title, class: "form-control", :required => true%>
+          <label class="createText"><%= t("listings.category") %>*</label>
+          <select name="post[category_id]"class="form-control">
+            <% Category.all.each do |category| %>
+              <option value="<%= category.id %>"><%= category.name %></option>
+            <% end %>
+          </select>
+          <label class="createText"><%= t("listings.description") %>*</label>
+          <%= text_area_tag 'post[description]', @post.description, class: "form-control", :required => true%>
+          <label class="createText">Choose a picture*</label>
+          <input type="file" class="form-control">
+          <label class="createText"><%= t("listings.price") %>*</label>
+          <%= text_field_tag 'post[price]', @post.price, class: "form-control", :required => true%>
+          <div class="row">
+            <div class="col-3">
+              <p class="createText">*Required field</p>
+            </div>
+            <div class="col-8"></div>
+            <div class="col-1" id="createColButton">
+              <%= submit_tag t("listings.save"), class: "btn btn-success", id: "submit" %>
+            </div>
+          </div>
+        <% end %>
+        </div>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  </div>
+<body>

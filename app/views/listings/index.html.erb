@@ -1,15 +1,15 @@
 <div class="container-fluid">
-  <% if @listing.blank? %>
+  <% if @posts.blank? %>
     <h1>No listing matching your search, try again.</h1>
   <%else %>
-    <% @listing.each do |listing| %>
+    <% @posts.each do |post| %>
       <div class="row">
         <div class="col productBloc">
-          <h2 class="productTitle"><%= listing.title %></h2>
+          <h2 class="productTitle"><%= post.title %></h2>
           <div class="divDateTag">
-            <p class="productDate"><%= listing.created_at %></p>
+            <p class="productDate"><%= post.created_at %></p>
             <div class="productTagDiv">
-              <%= listing.category.name %>
+              <%= post.category.name %>
             </div>
           </div>
           <div class="row">
@@ -18,12 +18,12 @@
               <%= image_tag("laptop.png", class: "productImg") %>
             </div>
             <div class="col-sm-9">
-              <p class="productDesc"><%= listing.description %>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <p class="productDesc"><%= post.description %>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               <div class="productDivPrixBtn">
-                <p class="productPrix">€ <%= listing.price %></p>
+                <p class="productPrix">€ <%= post.price %></p>
                 <button class="btn btn-success productBtn" data-toggle="modal" data-target="#contactModal"><%= t("listings.contact_seller") %></button>
               </div>
             </div>
