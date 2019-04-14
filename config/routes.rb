@@ -9,7 +9,10 @@ Rails.application.routes.draw do
     resources :home, only: [:index]
     #get 'home', to: 'home#index
 
-    root to: 'listings#index'
-    resources :listing#, only: [:index]
+  root to: 'listings#index'
+  resources :listings, only: [:index]
+
+  root to: 'create#index'
+  resources :create, only: [:index]
 
 end
