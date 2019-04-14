@@ -18,11 +18,7 @@
           <option value="en" <%= "selected" if session[:locale] == 'en' %>>EN</option>
               <option value="fr" <%= "selected" if session[:locale] == 'fr' %>>FR</option>
         </select>
-<<<<<<< Updated upstream
-        <%= link_to "Create my listings", listings_path, class: "btn btn-success my-2 my-sm-0 bg-success" %>
-=======
         <%= link_to t("homepage.create"), listing_index_path, class: "btn btn-success my-2 my-sm-0 bg-success" %>
->>>>>>> Stashed changes
       </form>
     </nav>
     <div class="container">

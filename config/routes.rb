@@ -12,10 +12,4 @@ Rails.application.routes.draw do
     root to: 'listings#index'
     resources :listing#, only: [:index]
 
-<<<<<<< Updated upstream
-  root to: 'listings#index'
-  resources :listings, only: [:index]  
-=======
->>>>>>> Stashed changes
-
 end
