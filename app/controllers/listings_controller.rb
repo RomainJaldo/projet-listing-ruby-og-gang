@@ -23,6 +23,7 @@ class ListingsController < ApplicationController
     end
   end
 
+
   private
 
   def posts_params

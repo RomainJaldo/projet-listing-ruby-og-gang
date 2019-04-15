@@ -38,6 +38,7 @@ fr:
   category: "Catégorie"
   hello: "Hello world"
   homepage:
+    account: "Mon compte"
     create: "Créer une annonce"
     search: "Rechercher"
     search_fied: "Que recherchez-vous ?"
@@ -51,6 +52,11 @@ fr:
     price: "Prix"
     picture: "Choisissez une image"
     save: "Enregistrer"
+  message:
+    close: "Fermer"
+    send: "Envoyer"
+    save: "Enregistrer"
+    your_message: "Votre message"
   date:
     day_names:
       - "Lundi"

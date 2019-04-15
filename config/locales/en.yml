@@ -37,6 +37,7 @@ en:
   category: "Category"
   hello: "Hello world"
   homepage:
+    account: "My account"
     create: "Create my listing"
     search: "Search"
     search_fied: "What are you searching for ?"
@@ -50,6 +51,10 @@ en:
     price: "Price"
     picture: "Chosse a picture"
     save: "Save"
+  message:
+    close: "Close"
+    send: "Send"
+    your_message: "Your message"
   activerecord:
     errors:
       models:

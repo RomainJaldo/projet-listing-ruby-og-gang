@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   has_many :posts
   has_many :messages
+
+  def full_name
+    "#{firstname} #{lastname}"
+  end
 end

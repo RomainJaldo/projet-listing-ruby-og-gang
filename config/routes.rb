@@ -6,11 +6,13 @@ Rails.application.routes.draw do
   localized do
     root to: 'home#index'
     resources :listings
-    resources :account
-    #get 'home', to: 'home#index
+    namespace :account do
+      # get 'contacts', on: :collection
+      # get 'messages', on: :collection
+      # get 'user', on: :collection
+      post 'messages', to: 'messages#create'
+    end
   end
 
-  # root to: 'listings#index'
-  # resources :listings, only: [:index]
 
 end
