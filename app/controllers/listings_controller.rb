@@ -10,6 +10,7 @@ class ListingsController < ApplicationController
   end
 
   def new
+      redirect_to new_user_registration_path unless current_user
     @post = Post.new
   end
 
@@ -30,7 +31,7 @@ class ListingsController < ApplicationController
       :category_id,
       :title,
       :description,
-      :price).merge(user_id: 1)
+      :price).merge(user_id: current_user.id)
   end
 
 end
