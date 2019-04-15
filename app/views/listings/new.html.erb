@@ -5,9 +5,9 @@
       </div>
       <div class="col-9" id="createCol">
         <h3><%= t("homepage.create") %></h3>
-        <%= form_for @post, url: {action: "create"}, html: {class: "form-group"}  do |post| %>
+        <%= form_for @post, url: {action: "create"}, html: {class: "form-group", id: "createForm"}  do |post| %>
           <label class="createText"><%= t("listings.title") %>*</label>
-          <%= post.text_field :title %>
+          <%= post.text_field :title, :class=> "form-control" %>
           <label class="createText"><%= t("listings.category") %>*</label>
           <select name="post[category_id]" class="form-control">
           <%= select_tag(:category_id, %>
@@ -15,14 +15,13 @@
               <option value="<%= category.id %>"><%= category.name %></option>
             <% end %>
           <% ) %>
-
           </select>
           <label class="createText"><%= t("listings.description") %>*</label>
-          <%= post.text_area :description %>
+          <%= post.text_area :description, :class=> "form-control", :rows=> "10" %>
           <label class="createText">Choose a picture</label>
           <input type="file" class="form-control">
           <label class="createText"><%= t("listings.price") %>*</label>
-          <%= post.text_field :price %>
+          <%= post.text_field :price, :class=> "form-control"%>
           <div class="row">
             <div class="col-3">
               <p class="createText">*Required field</p>
@@ -32,11 +31,10 @@
               <%= post.submit t("listings.save"), {class: "btn btn-success", id: "submit"} %>
             </div>
           </div>
-        <% end %>
+          <% end %>
+        </div>
+        <div class="col">
         </div>
       </div>
-      <div class="col">
-      </div>
     </div>
-  </div>
-<body>
+</body>
