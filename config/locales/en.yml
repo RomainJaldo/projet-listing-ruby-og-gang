@@ -48,6 +48,12 @@ en:
     price: "Price"
     picture: "Chosse a picture"
     save: "Save"
+  login:
+    title: "Log in"
+  signup:
+    title: "Create your account for free"
+  passwordChange:
+    title: "Forgot your password ?"
   activerecord:
     errors:
       models:

@@ -49,6 +49,12 @@ fr:
     price: "Prix"
     picture: "Choisissez une image"
     save: "Enregistrer"
+  login:
+    title: "Se connecter"
+  signup:
+    title: "Créer votre compte"
+  passwordChange:
+    title: "Mot de passe oublié ?"
   date:
     day_names:
       - "Lundi"

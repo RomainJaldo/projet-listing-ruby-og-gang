@@ -153,3 +153,37 @@ html, body {
   right: 23px;
 }
 /*--- End Create ---*/
+
+
+/*--- LogIn ---*/
+
+.logCol{
+  margin-top: 30px;
+}
+
+.logForm{
+  background-color: #343a40;
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.logText{
+  margin-top: 7px;
+}
+
+.logButton{
+  position: absolute;
+  bottom: 0;
+}
+
+/*--- END LogIn ---*/
+
+#signupMargin{
+  margin-top: 20px;
+}
+
+#passwordButton{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
