@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     root to: 'home#index'
     resources :listings
     #get 'home', to: 'home#index
+
+    root to: 'account#index'
+    resources :account
   end
 
   # root to: 'listings#index'
