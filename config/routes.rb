@@ -6,10 +6,8 @@ Rails.application.routes.draw do
   localized do
     root to: 'home#index'
     resources :listings
-    #get 'home', to: 'home#index
-
-    root to: 'account#index'
     resources :account
+    #get 'home', to: 'home#index
   end
 
   # root to: 'listings#index'

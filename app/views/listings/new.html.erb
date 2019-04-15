@@ -5,7 +5,7 @@
       </div>
       <div class="col-9" id="createCol">
         <h3><%= t("homepage.create") %></h3>
-        <%= form_for @posts, url: {action: "create"}, html: {class: "form-group"}  do |post| %>
+        <%= form_for @post, url: {action: "create"}, html: {class: "form-group"}  do |post| %>
           <label class="createText"><%= t("listings.title") %>*</label>
           <%= post.text_field :title %>
           <label class="createText"><%= t("listings.category") %>*</label>
