@@ -40,6 +40,8 @@ en:
     create: "Create my listing"
     search: "Search"
     search_fied: "What are you searching for ?"
+    login: "Log in"
+    logout: "Log out"
   listings:
     contact_seller: "Contact seller"
     title: "Title"

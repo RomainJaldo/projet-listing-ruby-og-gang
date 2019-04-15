@@ -41,6 +41,8 @@ fr:
     create: "Créer une annonce"
     search: "Rechercher"
     search_fied: "Que recherchez-vous ?"
+    login: "Se connecter"
+    logout: "Se déconnecter"
   listings:
     contact_seller: "Contacter le vendeur"
     title: "Titre"
