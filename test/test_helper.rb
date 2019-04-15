@@ -1,37 +1,18 @@
+ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
-
-ENV['RAILS_ENV'] ||= 'test'
-
-require 'rails/test_help'
 require 'rack/test'
-require 'capybara/rails'
 require 'minitest'
 require 'minitest/rails'
-require 'minitest/rails/capybara'
 require 'minitest/spec'
 require 'minitest/matchers'
 require 'minitest-metadata'
-require 'capybara/email'
-require 'timecop'
-require 'vcr'
-require 'rss'
-require 'open-uri'
-require 'active_support'
 
 include ActionDispatch::TestProcess
 include Warden::Test::Helpers
 
 Rails.logger.level = 5
-Dir[Rails.root.join('test/support/**/*.rb')].each { |f| require f }
-
-VCR.configure do |config|
-  config.cassette_library_dir = "test/cassettes"
-  config.hook_into :webmock
-  allow_http_connections_when_no_cassette = true
-  config.default_cassette_options = { allow_playback_repeats: true }
-
-end
+Dir[Rails.root.join('test/support/*/.rb')].each { |f| require f }
 
 class ActiveSupport::TestCase
   extend Minitest::Spec::DSL
@@ -68,6 +49,7 @@ class ActionDispatch::IntegrationTest
   include ResponseAssertions
 
   default_url_options[:host] = "example.org"
+
 
   Capybara.register_driver :selenium do |app|
     Capybara::Selenium::Driver.new(app, browser: :chrome)

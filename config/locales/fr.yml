@@ -38,9 +38,12 @@ fr:
   category: "Catégorie"
   hello: "Hello world"
   homepage:
+    account: "Mon compte"
     create: "Créer une annonce"
     search: "Rechercher"
     search_fied: "Que recherchez-vous ?"
+    login: "Se connecter"
+    logout: "Se déconnecter"
   listings:
     contact_seller: "Contacter le vendeur"
     title: "Titre"
@@ -55,6 +58,11 @@ fr:
     title: "Créer votre compte"
   passwordChange:
     title: "Mot de passe oublié ?"
+  message:
+    close: "Fermer"
+    send: "Envoyer"
+    save: "Enregistrer"
+    your_message: "Votre message"
   date:
     day_names:
       - "Lundi"

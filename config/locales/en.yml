@@ -37,9 +37,12 @@ en:
   category: "Category"
   hello: "Hello world"
   homepage:
+    account: "My account"
     create: "Create my listing"
     search: "Search"
     search_fied: "What are you searching for ?"
+    login: "Log in"
+    logout: "Log out"
   listings:
     contact_seller: "Contact seller"
     title: "Title"
@@ -54,6 +57,10 @@ en:
     title: "Create your account for free"
   passwordChange:
     title: "Forgot your password ?"
+  message:
+    close: "Close"
+    send: "Send"
+    your_message: "Your message"
   activerecord:
     errors:
       models:

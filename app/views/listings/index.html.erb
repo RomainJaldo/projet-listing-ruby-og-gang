@@ -18,10 +18,7 @@
               <%= image_tag("laptop.png", class: "productImg") %>
             </div>
             <div class="col-sm-9">
-              <p class="productDesc"><%= post.description %>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p class="productDesc"><%= post.description %></p>
               <div class="productDivPrixBtn">
                 <p class="productPrix">€ <%= post.price %></p>
                 <button class="btn btn-success productBtn" data-toggle="modal" data-target="#contactModal"><%= t("listings.contact_seller") %></button>
@@ -31,30 +28,33 @@
           </div>
         </div>
       </div>
+
+      <!-- Modal contact -->
+      <%= form_tag account_messages_path, method: :post, multipart: true do %>
+        <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title"><%= t("listings.contact_seller") %></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label> <%= t("message.your_message") %>*</label><br>
+                  <%= text_area_tag 'message[content]', nil, class: "form-control" %>
+                  <%= hidden_field_tag 'message[post_id]', post.id %>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"><%= t("message.close") %></button>
+                <%= submit_tag t("message.send"), class:'btn btn-success' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <%end %>
     <% end %>
   <%end %>
-</div>
-
-<!-- Modal contact -->
-<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title modal-txt">Contact seller</h5>
-        <button type="button" class="close" id="modal-close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="form-group">
-          <label for="textAreaContact" class="modal-txt">Your message</label>
-          <textarea class="form-control" id="textAreaContact" rows="10"></textarea>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Send</button>
-      </div>
-    </div>
-  </div>
 </div>
