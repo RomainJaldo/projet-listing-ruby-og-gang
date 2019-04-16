@@ -1,18 +1,19 @@
 class Account::MessagesController < ApplicationController
 
-  before_action redirect_if_not_logged, only: :create
+  before_action :redirect_if_not_logged, only: :create
 
   def index
+    @messages = Message.where(user_id: current_user.id).includes(:post)
   end
 
   def create
     @message = Message.new(messages_params)
     if @message.save
-      redirect_to listings_en_path
+      redirect_to listings_path
     end
   end
 
-  
+
   private
 
   def messages_params

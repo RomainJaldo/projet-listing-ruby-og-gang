@@ -1,0 +1,46 @@
+<% if current_user.present? %>
+  <%= render partial: 'account/index' %>
+  <section class="message_table container">
+    <br></br>
+    <table class="table">
+      <tr>
+        <th scope="col"><%= t('account.image') %></th>
+        <th scope="col"><%= t('listings.price') %></th>
+        <th scope="col"><%= t('account.date') %></th>
+        <th scope="col"><%= t('account.message') %></th>
+      </tr>
+      <% @messages.each do |message| %>
+        <tr>
+          <td scope="row">
+            <% if message.post.image.attached? %>
+              <%= image_tag message.post.image, width: '250px', class: "productImg" %>
+            <% end %>
+          </td>
+          <td scope="row"><%= message.post.price %></td>
+          <td scope="row"><%= message.created_at %></td>
+          <td scope="row"><%= message.content %></td>
+        </tr>
+      <% end %>
+    </table>
+  </section>
+<%else%>
+  <div class="modal d_block " tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><%= t('general_listing.disconected') %></h5>
+          <button type="button" class="close to_home" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <%= link_to(t('header.login'), new_user_session_path, class: 'btn btn-primary  green_button')  %>
+      </div>
+    </div>
+  </div>
+  </div>
+<% end %>
+<script>
+    $( ".close.to_home" ).click(function() {
+        window.location.replace("<%= root_path %>");
+    });
+</script>

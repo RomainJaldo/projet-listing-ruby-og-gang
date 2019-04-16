@@ -8,9 +8,9 @@ Rails.application.routes.draw do
     root to: 'home#index'
     resources :listings
     namespace :account do
-      get 'contacts', only: [:index]
-      get 'messages', only: [:index, :create]
-      get 'user', only: [:index, :create]
+      resources :contacts, only: [:index]
+      resources :messages, only: [:index]
+      resources :user, only: [:index, :update]
       post 'messages', to: 'messages#create'
     end
   end

@@ -63,6 +63,12 @@ fr:
     send: "Envoyer"
     save: "Enregistrer"
     your_message: "Votre message"
+  account:
+    contacts: "Mon contacts"
+    profile: "Mon profile"
+    messages: "Mon messages"
+    image: "Image"
+    date: "Date"
   date:
     day_names:
       - "Lundi"

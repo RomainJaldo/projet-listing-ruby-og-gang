@@ -61,6 +61,12 @@ en:
     close: "Close"
     send: "Send"
     your_message: "Your message"
+  account:
+    contacts: "My contacts"
+    profile: "My profile"
+    messages: "My messages"
+    image: "Image"
+    date: "Date"
   activerecord:
     errors:
       models:

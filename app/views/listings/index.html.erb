@@ -24,7 +24,7 @@
               <p class="productDesc"><%= post.description %></p>
               <div class="productDivPrixBtn">
                 <p class="productPrix">€ <%= post.price %></p>
-                <button class="btn btn-success productBtn" data-toggle="modal" data-target="#contactModal"><%= t("listings.contact_seller") %></button>
+                <button class="btn btn-success productBtn" data-toggle="modal" data-target="#contactModal-<%= post.id %>"><%= t("listings.contact_seller") %></button>
               </div>
             </div>
             <div class="col-sm-1"></div>
@@ -33,8 +33,8 @@
       </div>
 
       <!-- Modal contact -->
-      <%= form_tag account_messages_path, method: :post, multipart: true do %>
-        <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <div class="modal fade" id="contactModal-<%= post.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -43,21 +43,26 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">
-                <div class="form-group">
-                  <label> <%= t("message.your_message") %>*</label><br>
-                  <%= text_area_tag 'message[content]', nil, class: "form-control" %>
-                  <%= hidden_field_tag 'message[post_id]', post.id %>
+              <%= form_tag account_messages_path, method: :post, multipart: true do %>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label> <%= t("message.your_message") %>*</label><br>
+                    <%= text_area_tag 'message[content]', nil, class: "form-control" %>
+                    <%= hidden_field_tag 'message[post_id]', post.id %>
+                  </div>
                 </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal"><%= t("message.close") %></button>
-                <%= submit_tag t("message.send"), class:'btn btn-success' %>
-              </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal"><%= t("message.close") %></button>
+                  <%= submit_tag t("message.send"), class:'btn btn-success' %>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>
-      <%end %>
+
     <% end %>
-  <%end %>
+  <% end %>
 </div>
+<script>
+
+</scirpt>

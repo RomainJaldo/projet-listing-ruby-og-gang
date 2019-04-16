@@ -18,6 +18,24 @@ describe "Auth" do
         password: 'password123'
       }
 
-      assert_equal 200, last_responses.status
+      token = json_response['token']
+      get api_v1_account_root_path
+
     end
+
+    focus
+    it "Returns 401 if credentials invalid" do
+      post api_v1_auth_path, {
+        email: @user.email,
+        password: 'password123'
+      }
+      token = json_response['token']
+
+      get api_v1_account_root_path, nil, {
+        "HTTP-AUTHORIZATION": token
+      }
+
+      raise json_response.inspect
+    end
+
 end
