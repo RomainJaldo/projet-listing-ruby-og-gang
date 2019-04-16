@@ -2,9 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.0'
-group :production do
-  gem 'pg'
-end
+
+gem 'pg'
 gem 'mailcatcher'
 #Bootstrap
 gem 'bootstrap', '>= 4.0.0'
@@ -19,9 +18,7 @@ gem 'rails', '~> 5.2.2'
 #Route_translator
 gem 'route_translator', '~> 5.9'
 # Use sqlite3 as the database for Active Record
-group :development, :test do
-  gem "sqlite3", "~> 1.3.6"
-end
+#gem "sqlite3", "~> 1.3.6"
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
