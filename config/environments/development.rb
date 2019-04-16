@@ -61,4 +61,16 @@ Rails.application.configure do
 
   # Store files locally.
   config.active_storage.service = :local
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+   address:              'smtp.gmail.com',
+   port:                 25,
+   domain:               'example.com',
+   user_name:            'rom1.jaldo',
+   password:             'intenser974',
+   authentication:       'plain',
+   enable_starttls_auto: true
+}
+
 end

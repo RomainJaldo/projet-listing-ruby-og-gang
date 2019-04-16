@@ -64,6 +64,8 @@ en:
   activerecord:
     errors:
       models:
+        user:
+          password: "Wrong password"
         post:
           attributes:
             title:
