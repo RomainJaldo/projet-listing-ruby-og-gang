@@ -4,7 +4,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.0'
 
 gem 'pg'
-gem 'mailcatcher'
 #Bootstrap
 gem 'bootstrap', '>= 4.0.0'
 # jquery-rails
