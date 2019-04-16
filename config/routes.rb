@@ -6,19 +6,19 @@ Rails.application.routes.draw do
   localized do
     root to: 'home#index'
     resources :listings
-    namespace :account do
+    resources :account do
       # get 'contacts', on: :collection
       # get 'messages', on: :collection
       # get 'user', on: :collection
       post 'messages', to: 'messages#create'
-      end
     end
+  end
 
-    namespace :api, format: 'json' do
-      namespace :v1 do
-        post 'auth', to: 'auth#create'
-        get 'locales', to: 'locales#index', as: 'locales'
-      end
+  namespace :api, format: 'json' do
+    namespace :v1 do
+      post 'auth', to: 'auth#create'
+      get 'locales', to: 'locales#index', as: 'locales'
     end
+  end
 
 end
