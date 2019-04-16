@@ -32,6 +32,7 @@ class ListingsController < ApplicationController
       :category_id,
       :title,
       :description,
+      :image,
       :price).merge(user_id: current_user.id)
   end
 

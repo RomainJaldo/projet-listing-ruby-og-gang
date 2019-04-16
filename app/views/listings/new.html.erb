@@ -5,36 +5,36 @@
       </div>
       <div class="col-9" id="createCol">
         <h3><%= t("homepage.create") %></h3>
-        <%= form_for @post, url: {action: "create"}, html: {class: "form-group", id: "createForm"}  do |post| %>
+        <%= form_tag listings_path, method: :post, multipart: true, class: "form-group", id: "createForm"  do |post| %>
           <label class="createText"><%= t("listings.title") %>*</label>
-          <%= post.text_field :title, :class=> "form-control" %>
+          <%= text_field_tag 'post[title]', nil, class: "form-control" %>
           <label class="createText"><%= t("listings.category") %>*</label>
           <select name="post[category_id]" class="form-control">
-          <%= select_tag(:category_id, %>
-            <% Category.all.each do |category| %>
-              <option value="<%= category.id %>"><%= category.name %></option>
-            <% end %>
-          <% ) %>
+            <%= select_tag(:category_id, %>
+              <% Category.all.each do |category| %>
+                <option value="<%= category.id %>"><%= category.name %></option>
+              <% end %>
+            <% ) %>
           </select>
           <label class="createText"><%= t("listings.description") %>*</label>
-          <%= post.text_area :description, :class=> "form-control", :rows=> "10" %>
+          <%= text_area_tag 'post[description]', nil, class: "form-control", rows: "10" %>
           <label class="createText">Choose a picture</label>
-          <input type="file" class="form-control">
+          <%= file_field_tag 'post[image]', class: 'form-control' %>
           <label class="createText"><%= t("listings.price") %>*</label>
-          <%= post.text_field :price, :class=> "form-control"%>
+          <%= text_field_tag 'post[price]', nil, class: "form-control"%>
           <div class="row">
             <div class="col-3">
               <p class="createText">*Required field</p>
             </div>
             <div class="col-8"></div>
             <div class="col-1" id="createColButton">
-              <%= post.submit t("listings.save"), {class: "btn btn-success", id: "submit"} %>
+              <%= submit_tag t("listings.save"), class: "btn btn-success", id: "submit" %>
             </div>
           </div>
-          <% end %>
-        </div>
-        <div class="col">
-        </div>
+        <% end %>
+      </div>
+      <div class="col">
       </div>
     </div>
+  </div>
 </body>
