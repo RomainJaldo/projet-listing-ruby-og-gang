@@ -1,11 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  description: MyText
-  price: 1
+fender:
+  title: Fender Stratocaster
+  description: Dans un état irréprochable, aucun défaut, comme neuve.
+  price: 800
 
-two:
-  title: MyString
-  description: MyText
-  price: 1
+gibson:
+  title: Gibson SG
+  description: Achetée neuve en 2016, très bon état.
+  price: 1100
+
+iphone:
+  title: IPhone X
+  description: Smartphone en parfait état. Avec boîte et facture et accessoires.
+  price: 700

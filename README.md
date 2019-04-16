@@ -1,24 +1,59 @@
-# README
+# Getting started
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Installing
 
-* Ruby version
+```
+bundle install
 
-* System dependencies
+rails db:setup
 
-* Configuration
+rails s
 
-* Database creation
+```
 
-* Database initialization
 
-* How to run the test suite
+## Starting server
 
-* Services (job queues, cache servers, search engines, etc.)
+```
 
-* Deployment instructions
+rails s
 
-* ...
+```
+
+
+## Test in browser
+
+```
+localhost:3000
+
+```
+
+## Connection
+
+Connecting as admin
+
+```
+LogIn :
+Password :
+
+```
+
+Connecting as user
+
+```
+LogIn :
+Password :
+
+```
+
+## Useful links
+
+* [Rails Documentation](https://guides.rubyonrails.org/)
+* [Bootstrap Documentation](https://guides.rubyonrails.org/)
+
+
+# Authors
+
+* Romain Jaldorau - [RomainJaldo](https://github.com/RomainJaldo)
+* Fabien Trève - [FabienTreve](https://github.com/FabienTreve)

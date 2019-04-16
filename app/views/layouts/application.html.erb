@@ -13,12 +13,21 @@
     <nav class="navbar navbar-dark bg-dark font-weight-bold text-white" id="navbar">
       <a class="nav-brand" id="navTitle" href="/">Listings</a>
       <form class="form-inline">
-        <a class="nav-link text-white my-2 my-sm-0" href="/users/sign_in">>> Login</a>
-        <select class="form-control" id="btnLang">
-          <option value="en" <%= "selected" if session[:locale] == 'en' %>>EN</option>
-              <option value="fr" <%= "selected" if session[:locale] == 'fr' %>>FR</option>
+        <% if user_signed_in? %>
+              <%= link_to t('homepage.logout'), destroy_user_session_path, method: :delete, class:"nav-link text-white my-2 my-sm-0 font-weight-bold" %>
+              <%= link_to ">> "+t("homepage.account"), account_contacts_en_path, method: :get, class:"nav-link text-white my-2 my-sm-0 font-weight-bold" %>
+            <% else %>
+              <%= link_to">> "+t('homepage.login'), user_session_path, class:"nav-link text-white my-2 my-sm-0 font-weight-bold" %>
+            <% end %>
+        <select class="form-control" id="btnLang" onchange="window.location.href=this.value">
+          <% I18n.available_locales.each do |local| %>
+            <option value='<%= url_for(locale: local.to_s) %>'
+              <%= "selected" if I18n.locale == local %>>
+              <%= local.upcase %>
+            </option>
+          <% end %>
         </select>
-        <%= link_to t("homepage.create"), new_listing_path, class: "btn btn-success my-2 my-sm-0 bg-success" %>
+        <%= link_to t("homepage.create"), new_listing_en_path, class: "btn btn-success my-2 my-sm-0 bg-success" %>
       </form>
     </nav>
       <%= yield %>

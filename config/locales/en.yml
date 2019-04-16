@@ -37,14 +37,41 @@ en:
   category: "Category"
   hello: "Hello world"
   homepage:
+    account: "My account"
     create: "Create my listing"
     search: "Search"
     search_fied: "What are you searching for ?"
+    login: "Log in"
+    logout: "Log out"
   listings:
     contact_seller: "Contact seller"
+    title: "Title"
+    description: "Description"
+    category: "Category"
+    price: "Price"
+    picture: "Chosse a picture"
+    save: "Save"
+  login:
+    title: "Log in"
+  signup:
+    title: "Create your account for free"
+  passwordChange:
+    title: "Forgot your password ?"
+  message:
+    close: "Close"
+    send: "Send"
+    your_message: "Your message"
+  account:
+    contacts: "My contacts"
+    profile: "My profile"
+    messages: "My messages"
+    image: "Image"
+    date: "Date"
   activerecord:
     errors:
       models:
+        user:
+          password: "Wrong password"
         post:
           attributes:
             title:

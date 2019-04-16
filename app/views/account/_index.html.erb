@@ -1,0 +1,23 @@
+<section class="container-fluid">
+  <br>
+  <div class="row">
+    <% if current_page?(account_contacts_path) %>
+      <div class="col"><%= link_to t("account.contacts"), account_contacts_en_path , class:"btn btn-success green_button" %></div>
+    <% else %>
+      <div class="col"><%= link_to t("account.contacts"), account_contacts_en_path , class:"btn btn-secondary grey_button" %></div>
+    <% end %>
+
+    <% if current_page?(account_messages_path) %>
+      <div class="col"><%= link_to t("account.messages"),  account_messages_path , class:"btn btn-success green_button" %></div>
+    <% else %>
+      <div class="col"><%= link_to t("account.messages"), account_messages_path , class:"btn btn-secondary grey_button" %></div>
+    <% end %>
+
+    <% if current_page?(edit_user_registration_path) %>
+      <div class="col"><%= link_to t("account.profil"), edit_user_registration_path , class:"btn btn-success green_button" %></div>
+    <% else %>
+      <div class="col"><%= link_to t("account.profil"), edit_user_registration_path , class:"btn btn-secondary grey_button" %></div>
+    <% end %>
+  </div>
+  <hr>
+</section>

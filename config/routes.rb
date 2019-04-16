@@ -1,15 +1,25 @@
 Rails.application.routes.draw do
-  devise_for :users
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  devise_for :users
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   localized do
     root to: 'home#index'
     resources :listings
-    #get 'home', to: 'home#index
+    namespace :account do
+      resources :contacts, only: [:index]
+      resources :messages, only: [:index]
+      resources :user, only: [:index, :update]
+      post 'messages', to: 'messages#create'
+    end
   end
 
-  # root to: 'listings#index'
-  # resources :listings, only: [:index]
+  namespace :api, format: 'json' do
+    namespace :v1 do
+      post 'auth', to: 'auth#create'
+      get 'locales', to: 'locales#index', as: 'locales'
+    end
+  end
 
 end
