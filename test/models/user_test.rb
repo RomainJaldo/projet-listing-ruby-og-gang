@@ -13,4 +13,11 @@ describe User do
    assert_equal "#{user3.firstname} #{user3.lastname}", user3.full_name
  end
 
+ describe "generate_token" do
+   it "generates a token" do
+     token = @user.generate_token
+
+     assert_equal 36, token.length
+   end
+ end
 end
