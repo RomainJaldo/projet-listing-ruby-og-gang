@@ -34,8 +34,8 @@ localhost:3000
 Connecting as admin
 
 ```
-LogIn :
-Password :
+LogIn : admin@test.com
+Password : password
 
 ```
 
@@ -46,6 +46,9 @@ LogIn :
 Password :
 
 ```
+
+## App deployed with Heroku
+* https://listing-og-gang.herokuapp.com/
 
 ## Useful links
 
