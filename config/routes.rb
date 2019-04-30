@@ -19,6 +19,10 @@ Rails.application.routes.draw do
     namespace :v1 do
       post 'auth', to: 'auth#create'
       get 'locales', to: 'locales#index', as: 'locales'
+      get 'posts/', to: 'post#index'
+      root 'post#index'
+      get 'messages/', to: 'message#index'
+      get 'categories/', to: 'category#index'
     end
   end
 
